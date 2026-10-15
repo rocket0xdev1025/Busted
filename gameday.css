@@ -1,0 +1,60 @@
+/* A release-date rally, between the hero and holder achievements. */
+.gameday{position:relative;isolation:isolate;overflow:hidden;padding-top:64px;padding-bottom:46px;background:var(--bg);border-top:1px solid var(--pink);border-bottom:1px solid var(--line);color:var(--cream)}
+.gameday-inner{position:relative;z-index:2;width:60%;max-width:900px}
+.gameday-heading{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px}
+.gameday-heading h2{display:contents}
+.gameday-title-lead{width:100%;font:900 clamp(92px,10vw,184px)/.85 'Barlow Condensed',sans-serif;letter-spacing:-.025em;text-transform:uppercase;color:var(--pink);text-shadow:var(--logo-glow)}
+.gameday-title-sub{font-family:var(--display-font),sans-serif;font-size:clamp(34px,3.5vw,64px);font-weight:var(--display-weight);font-style:var(--display-style);line-height:1.15;letter-spacing:-.025em;text-transform:uppercase;text-shadow:var(--neon-type-glow)}
+.gameday-date{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;min-height:44px;padding:10px 14px;border:1px solid var(--pink);font:600 clamp(13px,1.1vw,18px)/1.2 'Barlow Condensed',sans-serif;letter-spacing:.1em;white-space:nowrap}
+.gameday-date svg{width:18px;height:18px}.gameday-date:hover{background:var(--surface)}
+.gameday-timer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;max-width:700px;margin:32px 0 30px}
+.gameday-unit{position:relative;min-width:0;text-align:center;padding:0 14px}
+.gameday-unit:first-child{padding-left:0;text-align:left}
+.gameday-unit+ .gameday-unit{border-left:1px solid var(--line)}
+.gameday-unit+ .gameday-unit:before{content:':';position:absolute;left:-6px;top:27%;padding:2px 0;background:var(--bg);color:var(--cream);font:600 34px/.8 'Barlow Condensed',sans-serif}
+.gameday-unit strong{display:block;font:900 clamp(76px,8vw,145px)/1 'Barlow Condensed',sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.025em;white-space:nowrap}
+.gameday-unit>span{display:block;margin-top:8px;font:500 15px/1.2 'Barlow Condensed',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.gameday-unit:first-child>span{padding-left:12px}
+.countdown-days strong{color:var(--pink);text-shadow:var(--logo-glow)}
+.gameday-message{display:grid;gap:5px;font:600 clamp(20px,1.7vw,28px)/1.25 'Barlow Condensed',sans-serif;max-width:800px}
+.gameday-message p+p{font-weight:800;color:var(--pink)}
+.gameday-actions{display:flex;align-items:center;flex-wrap:wrap;gap:20px 32px;margin-top:24px}
+.gameday-join{min-height:66px;padding:18px 28px;gap:26px;background:var(--pink);color:var(--bg);font:800 20px/1.1 'Barlow Condensed',sans-serif;letter-spacing:.08em;box-shadow:var(--control-glow)}
+.gameday-join:hover{background:var(--cream);color:var(--bg)}.gameday-join svg{width:24px;height:24px}
+.gameday-buy{display:inline-flex;align-items:center;gap:18px;min-height:48px;padding:7px 0;border-bottom:1px solid var(--accent);font:700 22px/1.1 'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.gameday-buy svg{width:20px;height:20px}.gameday-buy:hover{color:var(--pink);border-color:var(--pink)}
+.gameday-note{margin-top:24px;font:500 14px/1.5 'Barlow Condensed',sans-serif;letter-spacing:.05em;color:var(--muted)}
+.gameday-art{position:absolute;inset:0 0 0 auto;width:65%;z-index:0;overflow:hidden;filter:var(--scene-filter);mask-image:linear-gradient(90deg,transparent,#000 38%);transition:filter 1.8s}
+.gameday-art img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
+.gameday-sky{position:absolute;inset:0;z-index:1;opacity:calc(var(--stars) * .4);mask-image:linear-gradient(#000,transparent 70%)}
+html[data-phase=night] .gameday-art{filter:brightness(.85) saturate(1.06)}
+html[data-phase=evening] .gameday-art{filter:brightness(.88) saturate(.88) hue-rotate(-12deg)}
+html:is([data-phase=night],[data-phase=evening]) .gameday-message p+p{text-shadow:0 0 18px var(--haze)}
+html[data-phase=noon] .gameday-art>img:not(.noon-art){opacity:0}
+/* Moving the old footer countdown leaves one full-width contract block. */
+.crew-details{grid-template-columns:minmax(0,1fr)}
+@media(min-width:901px) and (max-width:1200px){.gameday-inner{width:65%}.gameday-unit{padding-inline:10px}.gameday-unit>span{font-size:13px;letter-spacing:.16em}.gameday-join{font-size:18px;padding-inline:22px;gap:18px}.gameday-actions{gap:20px}}
+@media(max-width:900px){
+  .gameday{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;padding:36px 0 30px}
+  .gameday-inner{display:contents}
+  .gameday-heading{grid-column:1;grid-row:1;position:relative;z-index:2;justify-content:center;gap:10px 14px;margin:0 22px}
+  .gameday-title-lead{text-align:center;font-size:clamp(64px,18vw,116px)}
+  .gameday-title-sub{width:100%;text-align:center;font-size:clamp(28px,6.6vw,42px);line-height:1.2}
+  .gameday-date{font-size:14px;gap:16px}
+  .gameday-timer{grid-column:1;grid-row:2;position:relative;z-index:2;width:calc(100% - 44px);max-width:620px;margin:0 auto}
+  .gameday-unit{padding-inline:8px}.gameday-unit:first-child{padding-left:8px;text-align:center}
+  .gameday-unit strong{font-size:clamp(52px,14vw,98px)}
+  .gameday-unit>span{font-size:11px;letter-spacing:.12em;margin-top:5px}.gameday-unit:first-child>span{padding-left:0}
+  .gameday-unit+ .gameday-unit:before{font-size:24px;left:-4px;top:25%}
+  .gameday-art{grid-column:1;grid-row:3;position:relative;inset:auto;width:100%;height:clamp(180px,54vw,320px);mask-image:linear-gradient(180deg,transparent,#000 10%,#000 82%,transparent)}
+  .gameday-art img{object-position:50% 58%}
+  .gameday-message{grid-column:1;grid-row:4;position:relative;z-index:2;text-align:center;font-size:21px;line-height:1.3;margin:0 22px;max-width:620px;justify-self:center}
+  .gameday-actions{grid-column:1;grid-row:5;position:relative;z-index:2;flex-direction:column;gap:12px;margin:0 22px}
+  .gameday-join{justify-content:center;width:100%;max-width:620px;min-height:58px;font-size:19px;padding:16px 20px;gap:18px}
+  .gameday-buy{font-size:20px;min-height:44px;padding:8px 0}
+  .gameday-note{grid-column:1;grid-row:6;position:relative;z-index:2;text-align:center;font-size:12px;margin:0 22px}
+  .gameday noscript{grid-column:1;grid-row:7}
+}
+@media(max-width:360px){.gameday-heading,.gameday-message,.gameday-actions,.gameday-note{margin-inline:16px}.gameday-timer{width:calc(100% - 32px)}.gameday-message{font-size:20px}.gameday-join{font-size:17px}.gameday-unit{padding-inline:6px}}
+@media(prefers-reduced-motion:no-preference){.gameday-art img{animation:gameday-drift 28s ease-in-out infinite alternate;transform-origin:60% 50%}@keyframes gameday-drift{from{transform:scale(1)}to{transform:scale(1.035)}}}
+@media(prefers-reduced-motion:reduce){.gameday-art{transition:none}}

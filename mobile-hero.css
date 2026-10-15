@@ -1,0 +1,63 @@
+/* Mobile layout: headline, unobstructed artwork, compact actions. Desktop is unchanged. */
+.mobile-crew-label,.mobile-community-intro,.community-invite strong,.community-ambition{display:none}
+@media(max-width:700px){
+  .hero{height:auto;min-height:100svh;max-height:none;padding:124px 0 18px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto auto 36px;gap:9px;align-content:start;background:var(--bg)}
+  html[data-phase] .hero-content{display:contents;position:static;top:auto;margin:0;max-width:none;width:auto}
+  .hero h1{grid-row:1;grid-column:1;container-type:inline-size;width:calc(100% - 44px);margin:0 22px;max-width:420px}
+  html[data-phase] .hero h1>span{width:100%;scale:1;transform:none;white-space:nowrap;font-size:var(--mobile-line-one);line-height:.96;letter-spacing:-.025em}
+  html[data-phase] .hero h1>span:nth-child(2){font-size:var(--mobile-line-two)}
+  html[data-phase] .hero h1>.token-title{font-size:var(--mobile-token);line-height:.98;margin-top:4px}
+  html[data-phase=dawn]{--mobile-line-one:14cqw;--mobile-line-two:12.6cqw;--mobile-token:20cqw}
+  html[data-phase=morning]{--mobile-line-one:15.5cqw;--mobile-line-two:13.8cqw;--mobile-token:20cqw}
+  html[data-phase=noon]{--mobile-line-one:16cqw;--mobile-line-two:14.1cqw;--mobile-token:20.4cqw}
+  html[data-phase=afternoon]{--mobile-line-one:13.6cqw;--mobile-line-two:12.2cqw;--mobile-token:19.8cqw}
+  html[data-phase=evening]{--mobile-line-one:11.1cqw;--mobile-line-two:9.5cqw;--mobile-token:14.1cqw}
+  html[data-phase=night]{--mobile-line-one:10.1cqw;--mobile-line-two:9.2cqw;--mobile-token:14.4cqw}
+  html[data-phase=night] .hero h1>span{line-height:1.13;letter-spacing:0}
+  html[data-phase=night] .hero h1>.token-title{line-height:1.13;margin-top:6px}
+  .hero-scene{grid-row:2;grid-column:1;position:relative;inset:auto;width:100%;height:clamp(320px,100vw,420px);z-index:-2;transform:none;animation:none;will-change:auto;overflow:hidden;mask-image:linear-gradient(180deg,transparent,#000 8%,#000 89%,transparent)}
+  .hero-scene img,.hero-scene .night-art{object-fit:cover;object-position:100% 52%;width:100%;height:100%}
+  .hero:after{display:none}
+  html[data-phase] .hero-content>p{grid-row:3;grid-column:1;margin:0 22px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:20px;line-height:1.15;letter-spacing:0;color:var(--cream)}
+  .hero-content>p>span{display:block}
+  .hero-contract{grid-row:4;grid-column:1;display:flex;align-items:center;gap:9px;width:calc(100% - 44px);max-width:none;margin:0 22px;padding:9px 11px;min-height:42px;background:color-mix(in srgb,var(--surface) 55%,transparent);border:1px solid var(--line);backdrop-filter:none}
+  .hero-ca-label{font-size:10px}.hero-ca-address{font-size:10px;line-height:1.45;letter-spacing:0;flex:1;min-width:0}.hero-ca-action{font-size:0;gap:0}.hero-ca-action svg{width:15px;height:15px}
+  .hero-actions{grid-row:5;grid-column:1;margin:0 22px;max-width:none;width:calc(100% - 44px);display:grid;grid-template-columns:1.2fr 1fr;gap:8px 9px;animation:none}
+  html[data-phase] .hero-actions .button{width:100%;max-width:none;min-width:0;height:56px;min-height:56px;padding:10px 11px;justify-content:space-between;align-items:center;gap:8px;box-shadow:none}
+  html[data-phase] .hero-actions .quote-cta{font:700 15px/1.2 'Barlow Condensed',sans-serif;letter-spacing:.02em;border:1px solid var(--pink);background:var(--bg);color:var(--cream);text-align:left}
+  html[data-phase] .hero-actions .movement-link{font:700 15px/1.2 'Barlow Condensed',sans-serif;letter-spacing:.04em;background:var(--pink);border:1px solid var(--pink);color:var(--bg);justify-content:center;flex-direction:row-reverse;gap:9px}
+  .hero-actions .movement-link .community-invite{max-width:none;min-width:0;display:block}
+  .community-invite .mobile-crew-label{display:block;white-space:nowrap}
+  .hero-actions .community-invite :is(strong,.community-ambition,.community-rotation){display:none}
+  .hero-actions .button>svg{width:18px;height:18px;flex-shrink:0}
+  .mobile-community-intro{display:block;grid-column:1/-1;text-align:center;font:500 12px/1.4 'Barlow Condensed',sans-serif;color:var(--muted);letter-spacing:.09em;text-transform:uppercase;margin:0}
+  .hero-rewards-link{grid-row:6;grid-column:1;justify-self:end;align-self:center;gap:8px;margin:0 22px 0 0;padding:8px 0;min-height:36px;font:600 12px 'Barlow Condensed',sans-serif;letter-spacing:.07em;width:fit-content;max-width:45%}
+  .hero-rewards-link>svg:first-child,.hero-rewards-link b{display:none}.hero-rewards-link>svg:last-child{transform:rotate(-90deg);width:14px;height:14px}
+  .hero .wanted{grid-row:6;grid-column:1;align-self:center;position:relative;inset:auto;z-index:4;margin:0 0 0 22px;width:fit-content;max-width:45%;text-align:left}
+  .hero .wanted>span{display:none}.hero .stars{gap:6px;margin:0;justify-content:flex-start;color:var(--pink);filter:drop-shadow(0 0 8px var(--haze))}.hero .stars svg{width:20px;height:20px}
+  .hero .hero-sky{mask-image:linear-gradient(#000 0 65%,transparent 80%)}
+  .hero .celestial{background:none}.hero .sky-cloud{display:none}.hero .celestial-body{left:auto;right:22px;top:160px;width:28px;height:28px;opacity:.58;box-shadow:0 0 22px -4px var(--sun-color);animation:none}
+  html[data-phase=night] .hero-scene{filter:brightness(.88) saturate(1.03)}
+  html[data-phase=evening] .hero-scene{filter:brightness(.9) saturate(.88) hue-rotate(-12deg)}
+  html:is([data-phase=morning],[data-phase=noon]) .hero .celestial-body{display:none}
+}
+@media(max-width:360px){.hero{padding-top:122px;padding-bottom:16px;gap:8px}.hero h1{width:calc(100% - 32px);margin-inline:16px}html[data-phase] .hero-content>p{margin-inline:16px;font-size:19px}.hero-ca-address{font-size:9px}.hero-contract{width:calc(100% - 32px);margin-inline:16px;gap:7px;padding:8px 9px}.hero-actions{width:calc(100% - 32px);margin-inline:16px}html[data-phase] .hero-actions .movement-link{font-size:13px;padding-inline:8px;gap:7px}.hero-actions .button>svg{width:16px;height:16px}.mobile-community-intro{font-size:11px}.hero .wanted{margin-left:16px}.hero .stars{gap:4px}.hero .stars svg{width:18px;height:18px}.hero-rewards-link{font-size:11px;margin-right:16px}}
+@media(min-width:500px) and (max-width:700px){.hero h1,html[data-phase] .hero-content>p,.hero-contract,.hero-actions{width:480px;max-width:calc(100% - 44px);margin-inline:auto}.hero h1{max-width:420px;justify-self:center}.hero-scene{height:420px}.hero .wanted{margin-left:max(22px,calc((100% - 480px)/2))}.hero-rewards-link{margin-right:max(22px,calc((100% - 480px)/2))}}
+@media(prefers-reduced-motion:no-preference) and (max-width:700px){.hero-scene img{animation:mobile-scene-drift 25s ease-in-out infinite alternate;transform-origin:75% 50%}@keyframes mobile-scene-drift{from{transform:scale(1)}to{transform:scale(1.035)}}}
+
+/* Back the slogan with ink, while keeping the artwork unobstructed. */
+@media(max-width:700px){
+  html[data-phase=night] .hero h1>span:not(.token-title){
+    width:calc(100% + 24px);margin-inline:-12px;padding-inline:12px;
+    background:linear-gradient(110deg,#101629,#0e1021);
+    box-shadow:inset 2px 0 var(--pink);color:#e0d7ff;text-shadow:0 0 8px #a193ff55;
+  }
+  html[data-phase=night] .hero h1>span:first-child{padding-top:12px}
+  html[data-phase=night] .hero h1>span:nth-child(2){padding-bottom:12px}
+  html[data-phase=night] .hero h1>.token-title{margin-top:12px}
+  html[data-phase=night] .hero .celestial{position:relative;inset:auto;grid-row:2;grid-column:1;align-self:stretch;z-index:1}
+  html[data-phase=night] .hero .celestial-body{top:22px;right:22px;width:32px;height:32px;opacity:.8}
+  .hero-tribute .tribute-lead{font-size:22px;font-weight:600;line-height:1.15;color:var(--cream)}
+  .hero-tribute .tribute-culture{margin-top:3px;font-size:29px;font-weight:800;line-height:1.15;color:var(--pink);letter-spacing:-.01em}
+}
+@media(max-width:360px){.hero-tribute .tribute-lead{font-size:21px}.hero-tribute .tribute-culture{font-size:26px}}

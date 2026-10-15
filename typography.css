@@ -1,0 +1,47 @@
+/* Different typefaces carry each time-of-day identity. */
+html[data-phase]{--display-font:'Barlow Condensed';--display-weight:900;--display-style:italic;--reading-font:'Space Grotesk';--ui-font:'Barlow Condensed';--hero-type-size:clamp(104px,10.3vw,165px);--section-type-size:clamp(58px,7.25vw,116px);--neon-type-glow:var(--logo-glow)}
+html[data-phase=dawn]{--display-font:'Rajdhani';--display-weight:600;--display-style:normal;--reading-font:'Rajdhani';--ui-font:'Rajdhani';--hero-type-size:clamp(80px,8vw,128px);--section-type-size:clamp(52px,5.6vw,88px)}
+html[data-phase=noon]{--display-font:'Teko';--display-weight:600;--display-style:normal;--reading-font:'Rajdhani';--ui-font:'Rajdhani';--hero-type-size:clamp(104px,10.5vw,168px);--section-type-size:clamp(58px,7.5vw,120px)}
+html[data-phase=afternoon]{--display-font:'Oswald';--display-weight:700;--display-style:normal;--ui-font:'Oswald';--hero-type-size:clamp(82px,8.3vw,133px);--section-type-size:clamp(48px,5.6vw,90px)}
+html[data-phase=evening]{--display-font:'Anton';--display-weight:400;--display-style:normal;--reading-font:'Chakra Petch';--ui-font:'Chakra Petch';--hero-type-size:clamp(86px,8.8vw,141px);--section-type-size:clamp(50px,6vw,96px)}
+html[data-phase=evening]{--display-font:'Gruppo';--display-weight:400;--display-style:normal;--reading-font:'Chakra Petch';--ui-font:'Chakra Petch';--hero-type-size:clamp(70px,7.5vw,120px);--section-type-size:clamp(44px,5.3vw,85px)}
+html[data-phase=night]{--display-font:'Bungee Outline';--display-weight:400;--display-style:normal;--reading-font:'Chakra Petch';--ui-font:'Chakra Petch';--hero-type-size:clamp(65px,6.8vw,109px);--section-type-size:clamp(36px,4.2vw,67px);--neon-type-glow:0 0 4px #ff9ade88,0 0 16px #ff32b97a,0 0 42px #ff00ae55}
+html[data-phase=night]{--display-font:'Monoton';--display-weight:400;--display-style:normal;--reading-font:'Chakra Petch';--ui-font:'Chakra Petch';--hero-type-size:clamp(58px,6.2vw,100px);--section-type-size:clamp(32px,3.8vw,61px);--neon-type-glow:0 0 3px #bcecff88,0 0 15px #6794ff70,0 0 38px #8148ff55}
+body{font-family:var(--reading-font),sans-serif}h1,h2,.wordmark,.quote-number,blockquote,.movement-copy h3{font-family:var(--display-font),sans-serif;font-weight:var(--display-weight);font-style:var(--display-style)}.hero h1{font-size:var(--hero-type-size)}.story h2,.culture h2{font-size:var(--section-type-size)}.site-header nav a,.button,.site-header .header-x,.utility-label,.section-index,.wanted>span,.quote-row p,.mood-button,.lighting-intro h2,.local-clock time,.vibe-shortcut,.quote-controls{font-family:var(--ui-font),sans-serif}.hero h1>span,.hero h1 .token-title,.wordmark,.movement-copy h3{text-shadow:var(--neon-type-glow)}
+html[data-phase=night] .hero h1{line-height:1.12;letter-spacing:.01em}html[data-phase=night] .hero h1 .token-title{font-size:1.24em;margin-top:.03em;color:var(--pink)}html[data-phase=night] .hero h1>span:not(.token-title){color:var(--accent)}html[data-phase=night] .wordmark{font-size:27px;text-shadow:var(--neon-type-glow)}html[data-phase=night] .story h2,html[data-phase=night] .culture h2{line-height:1.18;color:var(--accent);text-shadow:var(--neon-type-glow)}html[data-phase=night] .big-quote blockquote{white-space:normal;font-size:clamp(32px,4.3vw,69px);line-height:1.35;text-shadow:var(--neon-type-glow)}html[data-phase=night] .quote-row blockquote{font-size:clamp(20px,1.7vw,28px);line-height:1.5}html[data-phase=night] .movement-copy h3{font-size:clamp(27px,2.4vw,39px);line-height:1.3}html[data-phase=night] .crew-band h2{font-size:clamp(32px,3.8vw,61px);white-space:normal;line-height:1.3}html[data-phase=night] .culture-tape span{font-family:var(--display-font);font-weight:400;font-style:normal;font-size:21px}
+@media(max-width:1100px){html[data-phase=night] .hero-content{max-width:70vw}.site-header .wordmark{font-size:30px}.hero-actions .quote-cta{font-size:15px}.hero-actions .movement-link{font-size:14px}}
+@media(max-width:700px){.hero h1{font-size:clamp(42px,12vw,84px)}html[data-phase=morning] .hero h1{font-size:clamp(48px,16vw,99px)}html[data-phase=noon] .hero h1{font-size:clamp(48px,16vw,99px)}html[data-phase=evening] .hero h1{font-size:clamp(37px,10.5vw,73px)}html[data-phase=night] .hero h1{font-size:clamp(25px,7.8vw,54px)}html[data-phase=night] .hero h1{font-size:clamp(23px,7.2vw,50px)}html[data-phase=night] .hero-content{max-width:none}.story h2,.culture h2{font-size:clamp(36px,10.2vw,71px);white-space:normal;line-height:1.05}html:is([data-phase=morning],[data-phase=noon]) .story h2,html:is([data-phase=morning],[data-phase=noon]) .culture h2{font-size:clamp(47px,14.5vw,90px);white-space:nowrap}html[data-phase=night] .story h2,html[data-phase=night] .culture h2{font-size:clamp(23px,6.3vw,43px);white-space:normal;line-height:1.3}html[data-phase=night] .wordmark{font-size:21px}.site-header .wordmark{max-width:100%}.site-header .header-x{font-size:10px}.hero-actions .quote-cta{font-size:12px;letter-spacing:.03em}.hero-actions .movement-link{font-size:11px;letter-spacing:.025em}.hero-content>p{font-size:11px}.movement-copy h3{font-size:34px}html[data-phase=night] .movement-copy h3{font-size:25px;min-height:3.9em}html[data-phase=night] .crew-band h2{font-size:29px}.crew-band h2{font-size:12vw}.movement-actions .button{font-size:12px}.celestial-body{top:63%;left:14%}}
+@media(max-width:360px){html[data-phase=night] .wordmark{font-size:18px}.site-header .wordmark{font-size:26px}.site-header .header-x{font-size:9px;padding-inline:9px}.hero-actions .quote-cta{font-size:10px}.hero-actions .movement-link{font-size:10px}.hero-content>p{font-size:10px}.movement-copy h3{font-size:30px}html[data-phase=night] .movement-copy h3{font-size:22px}}
+/* Keep neon tubing bright at small sizes and preserve visible word spacing. */
+html[data-phase=night] :is(h1,h2,.wordmark,blockquote,.movement-copy h3){word-spacing:.15em}
+html[data-phase=night] :is(h1,h2,.wordmark,.movement-copy h3){-webkit-text-stroke:.35px currentColor;text-shadow:0 0 2px currentColor,0 0 10px #ff65c9a0,0 0 30px #ff16b560}
+html[data-phase=night] .site-header .wordmark{color:#ff86ce}
+@media(max-width:700px){html[data-phase=night] .hero h1{font-size:clamp(27px,9vw,62px)}html[data-phase=evening] .hero h1{font-size:clamp(31px,9.3vw,65px)}.celestial-body{left:14%;top:48%}}
+html[data-phase=night] .quote-row blockquote{-webkit-text-stroke:.2px currentColor;text-shadow:0 0 8px #64dfff60}
+.hero-actions .movement-link{height:72px;min-height:72px}
+@media(max-width:700px){.hero-actions .movement-link{height:56px;min-height:56px}}
+@media(max-width:700px){.hero-actions .quote-cta{font-size:13px}.hero-actions .movement-link{font-size:12px}.movement-actions .button{font-size:14px}}
+/* Night now uses the former ultra-night multi-line neon face. */
+html[data-phase=night]{--display-font:'Monoton';--display-weight:400;--display-style:normal;--reading-font:'Chakra Petch';--ui-font:'Chakra Petch';--hero-type-size:clamp(58px,6.2vw,100px);--section-type-size:clamp(32px,3.8vw,61px);--neon-type-glow:0 0 3px #bcecff88,0 0 15px #6794ff70,0 0 38px #8148ff55}
+html[data-phase=night] :is(h1,h2,.wordmark,.movement-copy h3){-webkit-text-stroke:0;text-shadow:var(--neon-type-glow)}
+html[data-phase=night] .quote-row blockquote{-webkit-text-stroke:0}
+@media(max-width:700px){html[data-phase=night] .hero h1{font-size:clamp(23px,7.2vw,50px)}}
+/* CJ's signature keeps the same solid, readable face in every theme. */
+html[data-phase] .big-quote blockquote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(44px,7.2vw,110px);font-weight:800;font-style:italic;line-height:1.08;letter-spacing:-.015em;word-spacing:normal;white-space:normal;-webkit-text-stroke:0;color:var(--cream);text-shadow:none}
+html[data-phase=evening] .big-quote blockquote{text-shadow:0 0 18px #b878ff35}
+html[data-phase=night] .big-quote blockquote{text-shadow:0 0 18px #ff40ba35}
+html[data-phase] .hero-actions .quote-cta{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;font-style:normal;letter-spacing:.05em;word-spacing:normal;line-height:1.3;-webkit-text-stroke:0;text-shadow:none}
+@media(max-width:700px){html[data-phase] .big-quote blockquote{font-size:clamp(36px,10.5vw,64px);line-height:1.1}html[data-phase] .hero-actions .quote-cta{font-size:16px;letter-spacing:.035em;min-height:52px}}
+@media(max-width:360px){html[data-phase] .hero-actions .quote-cta{font-size:15px}}
+
+/* Give the desktop tribute a clear hierarchy over the scene artwork. */
+@media(min-width:701px){
+  html[data-phase] .hero-content>.hero-tribute{
+    display:flex;flex-direction:column;align-items:flex-start;gap:4px;
+    font-family:'Barlow Condensed',sans-serif;line-height:1.12;letter-spacing:0;
+    text-shadow:0 2px 12px #0009;
+  }
+  .hero-tribute .tribute-lead{font-size:clamp(23px,1.8vw,30px);font-weight:600;color:var(--hero-ink)}
+  .hero-tribute .tribute-culture{font-size:clamp(30px,2.4vw,40px);font-weight:800;color:var(--pink);letter-spacing:-.01em}
+  html:is([data-phase=evening],[data-phase=night]) .hero-tribute .tribute-culture{text-shadow:0 0 14px var(--haze),0 2px 10px #000a}
+}

@@ -1,0 +1,16 @@
+/* Auto is a first-class choice alongside six saved lighting moods. */
+.lighting>.mood-options{grid-template-columns:repeat(7,minmax(0,1fr))}
+.lighting .lighting-help{margin-top:12px;font:400 13px/1.55 'Space Grotesk',sans-serif;color:var(--muted)}
+.mood-orb.clock svg{width:25px;height:25px}
+.mood-button[data-mood=auto]{font-weight:700}
+@media(max-width:700px){
+  .lighting-intro{width:100%}
+  .lighting-intro h2{font-size:18px}
+  .lighting-intro>p:first-of-type{font-size:13px}
+  .lighting .lighting-help{max-width:520px;margin-top:12px}
+  .lighting>.mood-options{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .lighting .local-clock{display:grid;grid-template-columns:1fr auto;width:100%;gap:5px 14px;margin:0;padding:15px 0 0;border-top:1px solid var(--line);align-items:center}
+  .lighting .local-clock>.utility-label{grid-column:1;grid-row:1}
+  .lighting .local-clock time{grid-column:2;grid-row:1/3}
+  .lighting .local-clock #phase-label{grid-column:1;grid-row:2}
+}

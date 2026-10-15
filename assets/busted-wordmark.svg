@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 72" width="348" height="72">
+  <title>$BUSTED</title>
+  <defs>
+    <g id="lettering" fill-rule="evenodd">
+      <g transform="scale(.75 1)"><path d="M10 4H40V14H14L10 18V22L14 26H30L40 36V46L30 56H0V46H26L30 42V40L26 36H10L0 26V14Z"/><path d="M17 0H23V60H17Z"/></g>
+      <path transform="translate(38 4)" d="M0 0H30L40 10V21L34 27L40 33V44L30 54H0ZM10 10V22H26L30 18V14L26 10ZM10 32V44H26L30 40V36L26 32Z"/>
+      <path transform="translate(86 4)" d="M0 0H10V40L14 44H26L30 40V0H40V44L30 54H10L0 44Z"/>
+      <path transform="translate(134 4)" d="M10 0H40V10H14L10 14V18L14 22H30L40 32V44L30 54H0V44H26L30 40V36L26 32H10L0 22V10Z"/>
+      <path transform="translate(182 4)" d="M0 0H44V10H27V54H17V10H0Z"/>
+      <path transform="translate(234 4)" d="M0 0H40V10H10V22H32V32H10V44H40V54H0Z"/>
+      <path transform="translate(282 4)" d="M0 0H28L40 12V42L28 54H0ZM10 10V44H24L30 38V16L24 10Z"/>
+    </g>
+    <linearGradient id="miami" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4ffff"/><stop offset="1" stop-color="#76e4ed"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(17 5) skewX(-8)">
+    <use href="#lettering" fill="#ff55b5" transform="translate(1.5 4)"/>
+    <use href="#lettering" fill="url(#miami)"/>
+  </g>
+</svg>
